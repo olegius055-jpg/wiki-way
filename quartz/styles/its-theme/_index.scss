@@ -332,9 +332,9 @@ body {
   }
 
   .callout[data-callout="note"] {
-    --callout-color: 2, 122, 255;
+    --callout-color: rgba(254, 255, 221, 0.726);
     background-color: light-dark(
-      rgba(8, 109, 221, 0.1),
+      hsla(0, 25%, 83%, 0.795),
       rgba(2, 122, 255, 0.1)
     );
     border-color: light-dark(rgba(8, 109, 221, 0.25), rgba(2, 122, 255, 0.25));
@@ -342,23 +342,23 @@ body {
     border-style: solid;
     border-width: 0px;
     mix-blend-mode: normal;
-    padding: 12px 16px;
+    padding: 4px 4px;
   }
 
   .callout[data-callout="note"] .callout-title {
     border-radius: 0px;
-    color: light-dark(rgb(8, 109, 221), rgb(2, 122, 255));
+    color: light-dark(rgb(254, 255, 221, 0.726), rgb(2, 122, 255));
     gap: 4px;
     padding: 0px;
   }
 
   .callout[data-callout="note"] .callout-title .callout-icon {
-    color: light-dark(rgb(8, 109, 221), rgb(2, 122, 255));
-    background-color: light-dark(rgb(8, 109, 221), rgb(2, 122, 255));
+    color: light-dark(rgb(2, 122, 255), rgb(2, 122, 255));
+    background-color: light-dark(rgb(2, 122, 255), rgb(2, 122, 255));
   }
 
   .callout[data-callout="note"] .callout-title > .callout-title-inner > p {
-    color: light-dark(rgb(8, 109, 221), rgb(2, 122, 255));
+    color: light-dark(rgb(254, 255, 221, 0.726), rgb(2, 122, 255));
     font-weight: 400;
   }
 
@@ -1355,6 +1355,7 @@ body {
     padding-bottom: 12px;
     padding-inline-start: 24px;
     padding-top: 12px;
+    margin: 4px;
   }
 
   code {
