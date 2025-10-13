@@ -311,14 +311,14 @@ body {
 
   .callout[data-callout="info"] .callout-title {
     border-radius: 0px;
-    color: light-dark(rgb(8, 109, 221), rgb(2, 122, 255));
+    color: light-dark(rgb(143, 180, 223), rgb(195, 209, 224));
     gap: 4px;
     padding: 0px;
   }
 
   .callout[data-callout="info"] .callout-title .callout-icon {
-    color: light-dark(rgb(8, 109, 221), rgb(2, 122, 255));
-    background-color: light-dark(rgb(8, 109, 221), rgb(2, 122, 255));
+    color: light-dark(rgb(255, 255, 255), rgb(192, 197, 202));
+    background-color: light-dark(rgb(205, 216, 230), rgb(220, 225, 231));
   }
 
   .callout[data-callout="info"] .callout-title > .callout-title-inner > p {
@@ -353,8 +353,8 @@ body {
   }
 
   .callout[data-callout="note"] .callout-title .callout-icon {
-    color: light-dark(rgb(2, 122, 255), rgb(2, 122, 255));
-    background-color: light-dark(rgb(2, 122, 255), rgb(2, 122, 255));
+    color: light-dark(rgb(150, 157, 165), rgb(189, 197, 207));
+    background-color: light-dark(rgb(177, 186, 196), rgb(194, 203, 212));
   }
 
   .callout[data-callout="note"] .callout-title > .callout-title-inner > p {
