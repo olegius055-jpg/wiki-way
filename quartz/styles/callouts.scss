@@ -106,9 +106,9 @@
   }
 
   &[data-callout="example"] {
-    --color: #7a43b5;
-    --border: #7a43b544;
-    --bg: #7a43b510;
+    --color:  rgb(255, 255, 243);
+    --border: #bdbdbd1e;
+    --bg: rgb(255, 255, 243);
     --callout-icon: var(--callout-icon-example);
   }
 
