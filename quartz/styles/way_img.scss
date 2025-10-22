@@ -1,0 +1,90 @@
+.way-card {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  overflow: hidden;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.way-card::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  opacity: 0.7;
+}
+
+.way-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* картинка заполняет карточку */
+  display: block;
+  transition: transform 0.3s ease;
+  padding: 0; /* 🔹 никакого внутреннего отступа */
+  margin: 0;
+  z-index: 0;
+}
+
+.way-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.7) 10%,
+    rgba(255, 254, 217, 0) 30%
+  );
+}
+
+.way-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.4) 40%,
+    rgba(0,0,0,0) 100%
+  );
+  z-index: 1; /* 🔹 слой над картинкой */
+  pointer-events: none;
+}
+
+.way-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 25%; /* 🔹 занимает нижние 25% карточки */
+  padding: 0.8em 1em; /* 🔹 одинаковые отступы по бокам */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 🔹 выравнивает текст внутри по вертикали */
+  z-index: 2;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box; /* 🔹 чтобы padding не влиял на height */
+}
+.way-card-content p {
+  margin: 0.3em 0 0;
+  font-size: 0.85em;
+  color: #ddd;
+}
+
+.way-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  padding: 1em;
+}
