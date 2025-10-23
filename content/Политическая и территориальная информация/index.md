@@ -1,12 +1,6 @@
 ---
-{"publish":true,"title":"Политическая и территориальная информация","created":"2025-10-08T16:08:55.256+02:00","modified":"2025-10-22T11:26:04.072+02:00","cssclasses":""}
+{"publish":true,"title":"Политическая и территориальная информация","created":"2025-10-08T16:08:55.256+02:00","modified":"2025-10-23T18:44:51.389+02:00","published":"2025-10-23T18:44:51.389+02:00","cssclasses":""}
 ---
 
 
-<div class="card-container_to">
-<a class="card_to" href="🏯 Клан Курода">🏯 Клан Курода</a>
-<a class="card_to" href="🐍 Клан Сугано">🐍 Клан Сугано</a>
-</div>
-
-
-
+<div><div class="way-card-container"><a class="card internal-link" href="Расы/Дазендзи.md"><img style="width: 150px; height: 150px;" alt="Дазендзи" /><div class="way-card-content"><p>Дазендзи</p></div></a></div><div class="way-card-container"><a class="card internal-link" href="Расы/Люди.md"><img style="width: 150px; height: 150px;" alt="Люди" /><div class="way-card-content"><p>Люди</p></div></a></div><div class="way-card-container"><a class="card internal-link" href="Расы/Сикони.md"><img style="width: 150px; height: 150px;" alt="Сикони" /><div class="way-card-content"><p>Сикони</p></div></a></div><div class="way-card-container"><a class="card internal-link" href="Расы/Коеми.md"><img style="width: 150px; height: 150px;" alt="Коеми" src="!Assets/heroictoken.png" /><div class="way-card-content"><p>Коеми</p></div></a></div></div>
