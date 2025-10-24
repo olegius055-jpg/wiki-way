@@ -1,9 +1,9 @@
 ---
-{"publish":true,"title":"Политическая и территориальная информация","created":"2025-10-08T16:08:55.256+02:00","modified":"2025-10-24T19:48:48.354+02:00","published":"2025-10-24T19:48:48.354+02:00","cssclasses":""}
+{"publish":true,"title":"Политическая и территориальная информация","created":"2025-10-08T16:08:55.256+02:00","modified":"2025-10-24T21:52:28.967+02:00","published":"2025-10-24T21:52:28.967+02:00","cssclasses":""}
 ---
 
 ###### Кланы
-<div class="way-card-container"><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Сугано.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Сугано" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Клан Сугано</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Курода.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Курода" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Клан Курода</p></div></div></a></div>
+<div class="way-card-container"><a><div class="way-card"><img alt="Клан Курода" src="app://e4fdc233006d15b250360e0148dad638ffd0/C:/Users/Germy/AppData/Local/FoundryVTT/Data/worlds/the-way/wiki_data/WikiWay/_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg?1761221080528" /><div class="way-card-content"><p>Клан Курода</p></div></div></a><a><div class="way-card"><img alt="Клан Сугано" src="app://e4fdc233006d15b250360e0148dad638ffd0/C:/Users/Germy/AppData/Local/FoundryVTT/Data/worlds/the-way/wiki_data/WikiWay/_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg?1761221080528" /><div class="way-card-content"><p>Клан Сугано</p></div></div></a></div>
 
 ###### Префектуры
 
