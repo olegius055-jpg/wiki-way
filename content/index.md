@@ -1,16 +1,13 @@
 ---
-{"publish":true,"title":"Путеводная страница","created":"2025-10-08T14:36:17.942+02:00","modified":"2025-10-23T14:24:36.503+02:00","tags":["Классы","Расы"],"cssclasses":""}
+{"publish":true,"title":"Путеводная страница","created":"2025-10-08T14:36:17.942+02:00","modified":"2025-10-25T11:19:04.383+02:00","published":"2025-10-25T11:19:04.383+02:00","tags":["Классы","Расы"],"cssclasses":""}
 ---
 
 
-[[Расы/index\|Расы]]
+##### Расы
+<div class="way-card-container"><a class="card internal-link" href="Расы/Дазендзи.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Дазендзи" src="_Assets/heroictoken_dajen.png" /><div class="way-card-content"><p>Дазендзи</p></div></div></a><a class="card internal-link" href="Расы/Люди.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Люди" src="_Assets/heroictoken_human.png" /><div class="way-card-content"><p>Люди</p></div></div></a><a class="card internal-link" href="Расы/Сикони.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Сикони" src="_Assets/heroictoken_warior.png" /><div class="way-card-content"><p>Сикони</p></div></div></a><a class="card internal-link" href="Расы/Коеми.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Коеми" src="_Assets/heroictoken.png" /><div class="way-card-content"><p>Коеми</p></div></div></a></div>
 
-[[Политическая и территориальная информация/index\|Кланы]]
+##### Кланы
+<div class="way-card-container"><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Курода.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Курода" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Клан Курода</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Сугано.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Сугано" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Клан Сугано</p></div></div></a></div>
 
-[[Классы/index\|Классы]]
-
-[[Особенности/index\|Особенности]]
-
-[[Оружие/index\|Оружие]]
-
-[[Способности/index\|Способности]]
+##### Префекты
+<div class="way-card-container"><a class="card internal-link" href="Политическая и территориальная информация/Префектуры/Асатори.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Асатори" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Асатори</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Префектуры/Инами.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Инами" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Инами</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Префектуры/Камияма.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Камияма" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Камияма</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Префектуры/Накано.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Накано" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Накано</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Префектуры/Цугури.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Цугури" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Цугури</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Префектуры/Минатоно.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Минатоно" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Минатоно</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Префектуры/Тацумори.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Тацумори" src="_Assets/2932b925c76ef2020cf896fd89d71a5a.jpg" /><div class="way-card-content"><p>Тацумори</p></div></div></a></div>
