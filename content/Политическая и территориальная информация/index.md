@@ -1,9 +1,9 @@
 ---
-{"publish":true,"title":"Политическая и территориальная информация","created":"2025-10-08T16:08:55.256+02:00","modified":"2025-10-26T23:29:09.694+01:00","published":"2025-10-26T23:29:09.694+01:00","cssclasses":""}
+{"publish":true,"title":"Политическая и территориальная информация","created":"2025-10-08T16:08:55.256+02:00","modified":"2025-10-26T23:32:37.279+01:00","published":"2025-10-26T23:32:37.279+01:00","cssclasses":""}
 ---
 
 ###### Кланы
-<div class="way-card-container"><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Курода.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Курода" src="_Assets/flag token.png" /><div class="way-card-content"><p>Клан Курода</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Сугано.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Сугано" src="_Assets/flag token_1.png" /><div class="way-card-content"><p>Клан Сугано</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Акано.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Акано" src="_Assets/flag token_3" /><div class="way-card-content"><p>Клан Акано</p></div></div></a></div>
+<div class="way-card-container"><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Курода.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Курода" src="_Assets/flag token.png" /><div class="way-card-content"><p>Клан Курода</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Сугано.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Сугано" src="_Assets/flag token_1.png" /><div class="way-card-content"><p>Клан Сугано</p></div></div></a><a class="card internal-link" href="Политическая и территориальная информация/Кланы/Клан Акано.md"><div class="way-card"><img style="width: 150px; height: 150px;" alt="Клан Акано" src="_Assets/flag token_3.png" /><div class="way-card-content"><p>Клан Акано</p></div></div></a></div>
 
 ###### Префектуры
 
