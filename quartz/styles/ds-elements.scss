@@ -1,3 +1,5 @@
+
+
 .ds-ability-card {
   border: 2px solid var(--color-base-50);
   border-radius: 12px;
@@ -6,7 +8,10 @@
   max-width: 750px;
   font-family: Arial, sans-serif;
   margin: 16px auto 16px ;
-  background-color: rgb(255, 255, 243);
+  background-color: light-dark(
+    rgba(232, 236, 185, 0.26),
+    rgba(57, 59, 59, 0.37)
+    );
   
 
   * {

@@ -223,8 +223,8 @@ body {
   .callout[data-callout="example"] {
     --callout-color: 168, 130, 255;
     background-color: light-dark(
-       rgb(255, 255, 243),
-       rgb(255, 255, 243)
+       rgba(0, 0, 0, 0),
+       rgba(0, 0, 0, 0)
     );
     border-color: light-dark(
       rgba(120, 82, 238, 0.25),
