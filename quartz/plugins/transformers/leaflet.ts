@@ -67,7 +67,7 @@ export const LeafletReader: QuartzTransformerPlugin<Partial<Options>> = (userOpt
                           maxZoom: ${maxZoom},
                         });
                         const bounds = [[0,0], [100,100]];
-                        const image = L.imageOverlay('/_Assets/${imgPath}').addTo(map);
+                        const image = L.imageOverlay('https://wiki-way.vercel.app/_Assets/${imgPath}').addTo(map);
                         map.fitBounds(bounds);
                         map.setZoom(${defaultZoom});
                         map.setView([${lat}, ${long}]);
