@@ -1,79 +1,128 @@
-// import "leaflet/dist/leaflet.css"
-import L from "leaflet"
-import yaml from "js-yaml"
+fimport yaml from "js-yaml"
 import { visit } from "unist-util-visit"
 import { QuartzTransformerPlugin } from "../types"
 
-interface Options {
+function extractImagePath(image: unknown): string {
+  if (typeof image === "string") {
+    return image
+  }
+
+  if (Array.isArray(image)) {
+    for (const entry of image) {
+      const result = extractImagePath(entry)
+      if (result) {
+        return result
+      }
+    }
+    return ""
+  }
+
+  if (image && typeof image === "object") {
+    const keys = Object.keys(image)
+    for (const key of keys) {
+      if (key) {
+        return key
+      }
+      const value = (image as Record<string, unknown>)[key]
+      const nested = extractImagePath(value)
+      if (nested) {
+        return nested
+      }
+    }
+  }
+
+  return ""
 }
 
-const defaultOptions: Options = {
+function sanitizeAssetPath(rawPath: unknown): string {
+  if (typeof rawPath !== "string") {
+    return ""
+  }
+
+  const trimmed = rawPath.replace(/\[\[|\]\]/g, "").trim()
+  if (!trimmed) {
+    return ""
+  }
+  if (/^(https?:)?\/\//i.test(trimmed)) {
+    return trimmed
+  }
+  const normalized = trimmed.replace(/\\/g, "/")
+  const encoded = normalized
+    .split("/")
+    .map((segment) => segment.trim())
+    .filter((segment) => segment.length > 0)
+    .map((segment) => encodeURIComponent(segment))
+    .join("/")
+  return `/_Assets/${encoded}`
 }
 
-export const LeafletReader: QuartzTransformerPlugin<Partial<Options>> = (userOpts) => {
-  const opts = { ...defaultOptions, ...userOpts }
+function toNumeric(value: unknown): number | undefined {
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return value
+  }
+  if (typeof value === "string" && value.trim().length > 0) {
+    const parsed = Number(value)
+    if (Number.isFinite(parsed)) {
+      return parsed
+    }
+  }
+  return undefined
+}
 
+export const LeafletReader: QuartzTransformerPlugin = () => {
   return {
     name: "LeafletReader",
     markdownPlugins() {
       return [
         () => {
           return (tree: any) => {            
-            let leafletInjected = false
             visit(tree, "code", (node, index, parent) => {
-                if (node.lang === "leaflet") {
+              if (node.lang === "leaflet") {
                 try {
                   const data = yaml.load(node.value) as any
                   const id = data.id || Math.floor(Math.random() * 10000)
-                  let imgRaw = data.image
-                  let imgPath = ""
-                  if (typeof imgRaw === "string") {
-                    imgPath = imgRaw
-                  } else if (Array.isArray(imgRaw)) {
-                    imgPath = imgRaw[0]
-                  } else if (imgRaw && typeof imgRaw === "object") {
-                    imgPath = Object.keys(imgRaw)[0]
+                  const height = String(data.height ?? "500px").replace(/"/g, "&quot;")
+                  const imgPath = sanitizeAssetPath(extractImagePath(data.image))
+                  const lat = toNumeric(data.lat)
+                  const long = toNumeric(data.long)
+                  const minZoom = toNumeric(data.minZoom)
+                  const maxZoom = toNumeric(data.maxZoom)
+                  const defaultZoom = toNumeric(data.defaultZoom)
+                  const scale = toNumeric(data.scale)
+                  const unit = typeof data.unit === "string" ? data.unit : undefined
+
+                  const attributes: string[] = [
+                    `id="leaflet-map-${id}"`,
+                    `class="leaflet-map"`,
+                    `style="height:${height}; width:100%;"`,
+                  ]
+
+                  if (imgPath) {
+                    attributes.push(`data-leaflet-image="${imgPath}"`)
+                  }
+                  if (lat !== undefined) {
+                    attributes.push(`data-leaflet-lat="${lat}"`)
+                  }
+                  if (long !== undefined) {
+                    attributes.push(`data-leaflet-long="${long}"`)
+                  }
+                  if (minZoom !== undefined) {
+                    attributes.push(`data-leaflet-min-zoom="${minZoom}"`)
+                  }
+                  if (maxZoom !== undefined) {
+                    attributes.push(`data-leaflet-max-zoom="${maxZoom}"`)
+                  }
+                  if (defaultZoom !== undefined) {
+                    attributes.push(`data-leaflet-default-zoom="${defaultZoom}"`)
+                  }
+                  if (scale !== undefined) {
+                    attributes.push(`data-leaflet-scale="${scale}"`)
+                  }
+                  if (unit) {
+                    attributes.push(`data-leaflet-unit="${unit.replace(/"/g, "&quot;")}"`)
                   }
 
-                  imgPath = String(imgPath || "").replace(/\[\[|\]\]/g, "").trim()
-                  const height = data.height || "500px"
-                  const lat = data.lat || 0
-                  const long = data.long || 0
-                  const minZoom = data.minZoom || 5
-                  const maxZoom = data.maxZoom || 12
-                  const defaultZoom = data.defaultZoom || 5
-
-                  let injectLeaflet = ""
-                  if (!leafletInjected) {
-                    leafletInjected = true
-                    injectLeaflet = `
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-                    `
-                  }
-
-                  const html = `
-                    ${injectLeaflet}
-                    <div id="leaflet-map-${id}" style="height:${height};"></div>
-                    <script>
-                      (function() {
-                        if (typeof L === 'undefined') {
-                          console.error('error');
-                          return;
-                        }
-                        const map = L.map('leaflet-map-${id}', {
-                          crs: L.CRS.Simple,
-                          minZoom: ${minZoom},
-                          maxZoom: ${maxZoom},
-                        });
-                        const bounds = [[0,0], [100,100]];
-                        const image = L.imageOverlay('https://wiki-way.vercel.app/_Assets/${imgPath}').addTo(map);
-                        map.fitBounds(bounds);
-                        map.setZoom(${defaultZoom});
-                        map.setView([${lat}, ${long}]);
-                      })();
-                    </script>
-                  `
+                  const html = `<div ${attributes.join(" ")}></div>`
 
                   parent.children[index] = {
                     type: "html",
