@@ -1,4 +1,4 @@
-fimport yaml from "js-yaml"
+import yaml from "js-yaml"
 import { visit } from "unist-util-visit"
 import { QuartzTransformerPlugin } from "../types"
 
